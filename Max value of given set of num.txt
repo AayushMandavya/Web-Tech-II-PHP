@@ -1,0 +1,8 @@
+Max value of a given set of number in  php
+
+Step 1: Declare a array with the set of values from the question. Declare a varible to store the largest number.
+Step 2: Create a for loop with condition: runs till the length of array.
+Step 3: If the selected array element is greater than declared variable(large). Store the element in large.
+Step 4: Repeat the loop till array elements are checked.
+Step 5: Print variable large.
+Step 6: End

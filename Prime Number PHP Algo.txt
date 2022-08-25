@@ -1,0 +1,9 @@
+Prime Number of Not Algorithm:
+
+Step 1: Declare a function named isprime and variable $n for storing number to be checked.
+Step 2: Create a for loop with initial condition defined by $x=2 to run till it's smaller than given input.
+Step 3: Check if the modulus of given number by $x(2) is 0 .Return 0 if modulus is 0.
+Step 4: Return 1 elsewise
+Step 5: If the returning value is equal to 0 then the number isn't a prime number.
+Step 6: If the returning value is equal to 1 then the number is a prime number.
+Step 7: End
