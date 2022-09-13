@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +25,42 @@
     echo "</pre>";
         echo "your email is : " .$email . "<br>";
         echo "your password is : " .$password . "<br>";
+
+        //DATABASE CONNECTION   
+        $conn= new mysqli("localhost","root","","login_auth");
+
+        if($conn->connect_error) {
+            die("$conn->connect_error");
+        }
+        echo " SQL Connection Success";
+
+        $sql="SELECT * FROM user WHERE email='$email'";
+        $result=$conn->query($sql);
+        echo"<pre>";
+        print_r($result);
+        echo "</pre>";
+
+        $row=$result->fetch_assoc();
+        print_r($row);
+        echo"<br>";
+        echo "Your ID is: ". $row["id"];
+        echo"<br>";
+        echo "Your Name is: ". $row["name"];
+        echo"<br>";
+        echo "Your email is: ". $row["email"];
+        echo"<br>";
+        echo "Your password is: ". $row["password"];
+        echo"<br>";
+
+        $db_emai=$row["email"];
+        $db_password=$row["password"];
+
+        if($password===$db_password){
+            echo "login success";
+        }
+        else{
+            echo "wrong details";
+        }
     }
        ?>
 </body>
